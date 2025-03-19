@@ -19,11 +19,11 @@ from camel.toolkits import MedCalcToolkit
 from camel.types import ModelPlatformType, ModelType
 
 # Define system message
-sys_msg = """You are a helpful math assistant that can perform symbolic 
-computations"""
+sys_msg = """You are a helpful assistant."""
 
 # Set model config
 tools = MedCalcToolkit().get_tools()
+print(tools)
 model_config_dict = ChatGPTConfig(
     temperature=0.0,
 ).as_dict()
@@ -43,8 +43,14 @@ camel_agent = ChatAgent(
 camel_agent.reset()
 
 # Define a user message with a complex expression
-usr_msg = """Simplify the expression: (x^4 - 16)/(x^2 - 4) + sin(x)^2 + cos(x)
-^2 + (x^3 + 6*x^2 + 12*x + 8)/(x + 2)"""
+usr_msg = """A 30-year-old woman comes to the physician because of headaches and nausea for the past 3 weeks. The headaches are holocranial and last up to 
+several hours. During this period, she has also had a swishing sound in both ears, which decreases when she turns her head to either side. 
+She has had multiple episodes of blurring of vision and double vision for the past 2 weeks. She has vomited twice in the past week. 
+She has nodular cystic acne and polycystic ovarian disease. Current medications include an oral contraceptive, metformin, and isotretinoin. 
+She is 163 cm (5 ft 4 in) tall and weighs 89 kg (196 lb); BMI is 33.5 kg/m2. Her temperature is 37.3掳C (99.1掳F), pulse is 70/min, and blood 
+pressure is 128/82 mm Hg. She is oriented to time, place, and person. Examination shows acne over her cheeks and back. Hirsutism is present. 
+Visual acuity is 20/20 in both eyes. There is esotropia of the left eye.
+Using the adjusted body weight formula, what is the patient's adjusted body weight in terms of kg?"""
 
 # Get response information
 response = camel_agent.step(usr_msg)
