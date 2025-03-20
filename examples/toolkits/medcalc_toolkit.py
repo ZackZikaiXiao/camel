@@ -18,6 +18,12 @@ from camel.models import ModelFactory
 from camel.toolkits import MedCalcToolkit
 from camel.types import ModelPlatformType, ModelType
 
+import os
+
+# 设置 OPENAI_API_KEY 环境变量
+os.environ["OPENAI_API_KEY"] = ""
+
+
 # Define system message
 sys_msg = """You are a helpful assistant."""
 
@@ -57,9 +63,16 @@ response = camel_agent.step(usr_msg)
 print(response.info['tool_calls'])
 '''
 ===============================================================================
-[ToolCallingRecord(tool_name='simplify_expression', args={'expression': '(x**4 
-- 16)/(x**2 - 4) + sin(x)**2 + cos(x)**2 + (x**3 + 6*x**2 + 12*x + 8)/(x + 2)
-'}, result='{"status": "success", "result": "2*x**2 + 4*x + 9"}', 
-tool_call_id='call_CdoZsLWeagT0yBM13RYuz09W')]
+[ToolCallingRecord(tool_name='adjusted_body_weight', args={'weight_value': 89, 
+'weight_unit': 'kg', 'height_value': 163, 'height_unit': 'cm', 'sex': 'Female', 
+'age': 30}, result='{"rationale": "The patient\'s gender is Female.\\n
+The patient\'s height is 163.0 cm, which is 163.0 cm * 0.393701 in/cm = 64.173 in. 
+\\nFor females, the ideal body weight (IBW) is calculated as follows:\\n
+IBW = 45.5 kg + 2.3 kg * (height (in inches) - 60)\\nPlugging in the values 
+gives us 45.5 kg + 2.3 kg * (64.173 (in inches) - 60) = 55.098 kg.\\nHence, 
+the patient\'s IBW is 55.098 kg.The patient\'s weight is 89.0 kg. 
+To compute the ABW value, apply the following formula: 
+ABW = IBW + 0.4 * (weight (in kg) - IBW (in kg)). ABW = 55.098 kg + 0.4 * (89.0 kg  - 55.098 kg) = 68.659 kg. 
+The patient\'s adjusted body weight is 68.659 kg.\\n", "final_answer": "68.659"}', tool_call_id='call_5IJD6Us7RfkVP21zx9G5JGyf')]
 ===============================================================================
 '''
