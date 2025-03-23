@@ -18,7 +18,7 @@ def compute_delta_gap_explanation(input_parameters):
     Calculates the patient's delta gap and generates a detailed explanatory text.
 
     Parameters:
-        input_variables (dict): A dictionary containing the following key-value pairs:
+        input_parameters (dict): A dictionary containing the following key-value pairs:
             - "sodium" (tuple): The patient's blood sodium level in the format (value, unit).
                 - Value (float): The blood sodium level.
                 - Unit (str): The unit of blood sodium level.
