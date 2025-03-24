@@ -17,7 +17,7 @@ def compute_heart_score_explanation(input_parameters):
     Calculates the patient's heart score and generates a detailed explanatory text.
 
     Parameters:
-        input_variables (dict): A dictionary containing the following key-value pairs:
+        input_parameters (dict): A dictionary containing the following key-value pairs:
             - "age" (array): The patient's albumin concentration in the format (value, unit).
                 - Value (float): Age.
                 - Unit (str): The unit can be "months", "years".

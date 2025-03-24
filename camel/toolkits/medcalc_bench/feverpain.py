@@ -15,7 +15,7 @@ def compute_fever_pain_explanation(input_parameters):
     Calculates the patient's FeverPAIN score and generates a detailed explanatory text.
 
     Parameters:
-        input_variables (dict): A dictionary containing the following key-value pairs:
+        input_parameters (dict): A dictionary containing the following key-value pairs:
             - "symptom_onset" (Optional[bool]): Whether the patient has a fever in the past 24 hours.
             - "purulent_tonsils" (Optional[bool]): Presence of pus on the tonsils.
             - "fever_24_hours" (Optional[bool]): Whether the patient has had a fever in the past 24 hours.
