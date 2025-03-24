@@ -55,8 +55,8 @@ with open(file_path, 'r') as file:
     data = json.load(file)
 
 # Specify the Calculator in camel/toolkits/medcalc_bench
-# OPTION(eg): adjusted_body_weight, anion_gap, bmi_calculator, calcium_correction, homa_ir, mean_arterial_pressure, sOsm
-calculator_name = "sOsm"
+# OPTION(eg): adjusted_body_weight, anion_gap, bmi_calculator, calcium_correction, homa_ir, mean_arterial_pressure, sOsm, estimated_conception_date, delta_gap, mdrd_gfr, target_weight
+calculator_name = "target_weight"
 
 # Extract the "usr_msg" and "Ground Truth Answer" that match the criteria
 target_entry = None 

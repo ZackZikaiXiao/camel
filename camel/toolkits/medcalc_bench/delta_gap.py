@@ -9,7 +9,7 @@ Modifications include:
 Date: March 2025
 """
 
-from anion_gap import compute_anion_gap_explanation
+from camel.toolkits.medcalc_bench.anion_gap import compute_anion_gap_explanation
 from camel.toolkits.medcalc_bench.utils.rounding import round_number
 
 
