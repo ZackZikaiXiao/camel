@@ -71,7 +71,7 @@ def molg_to_molg_explanation(mass, compound, src_unit, tgt_unit):
     conversion_factors_mol = {
         'mol': 1,
         'mmol': 0.001,
-        'µmol': 0.000001,
+        'μmol': 0.000001,
         'pmol': 0.000000001,
     }
 

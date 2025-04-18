@@ -245,6 +245,20 @@ if __name__ == "__main__":
             "creatinine": (1.0, "mg/dL"),
             "age": (56, "years"),
         },
+        {
+            "weight": (115, "kg"),
+            "height": (198, "cm"),
+            "sex": "Male",
+            "creatinine": (691.6, "μmol/L"),
+            "age": (43, "years"),
+        },
+        {
+            "weight": (88.5, "kg"),
+            "height": (169, "cm"),
+            "sex": "Female",
+            "creatinine": (79, "μmol/L"),
+            "age": (65, "years"),
+        },
     ]
     # {'sex': 'Female', 'weight': [55.0, 'kg'], 'height': [162.8, 'cm'],
     # 'creatinine': [0.57, 'mg/dL'], 'age': [16, 'years']}
